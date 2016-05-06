@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xYV-27-8na">
+                                <rect key="frame" x="20" y="84" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qk1-yy-dWQ">
+                                <rect key="frame" x="20" y="184" width="560" height="30"/>
+                                <state key="normal" title="获取密码"/>
+                                <connections>
+                                    <action selector="getMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EYH-fj-cS3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="获取的信息" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wes-ip-PG9">
+                                <rect key="frame" x="20" y="234" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Fu-Ya-Xxs">
+                                <rect key="frame" x="20" y="134" width="560" height="30"/>
+                                <state key="normal" title="存储密码"/>
+                                <connections>
+                                    <action selector="saveMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fmr-4F-JMc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.48521593499999999" blue="0.1146431992" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="7Fu-Ya-Xxs" firstAttribute="top" secondItem="xYV-27-8na" secondAttribute="bottom" constant="20" id="58k-tE-nCk"/>
+                            <constraint firstItem="wes-ip-PG9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="DMK-GH-xWq"/>
+                            <constraint firstItem="qk1-yy-dWQ" firstAttribute="top" secondItem="7Fu-Ya-Xxs" secondAttribute="bottom" constant="20" id="FtA-RY-XP5"/>
+                            <constraint firstAttribute="trailing" secondItem="wes-ip-PG9" secondAttribute="trailing" constant="20" id="JGY-VJ-f45"/>
+                            <constraint firstAttribute="trailing" secondItem="qk1-yy-dWQ" secondAttribute="trailing" constant="20" id="JcR-aF-y0p"/>
+                            <constraint firstItem="xYV-27-8na" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="QjA-jc-UiR"/>
+                            <constraint firstAttribute="trailing" secondItem="7Fu-Ya-Xxs" secondAttribute="trailing" constant="20" id="Qjy-2g-bV8"/>
+                            <constraint firstAttribute="trailing" secondItem="xYV-27-8na" secondAttribute="trailing" constant="20" id="UAb-dK-uCD"/>
+                            <constraint firstItem="xYV-27-8na" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="64" id="X7x-Fz-e7m"/>
+                            <constraint firstItem="qk1-yy-dWQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="pjE-Vm-c3j"/>
+                            <constraint firstItem="wes-ip-PG9" firstAttribute="top" secondItem="qk1-yy-dWQ" secondAttribute="bottom" constant="20" id="rjO-pd-xw4"/>
+                            <constraint firstItem="7Fu-Ya-Xxs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="wQ7-pb-wj1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="wes-ip-PG9" id="3UT-8l-3TC"/>
+                        <outlet property="textFiled" destination="xYV-27-8na" id="vsY-fu-PYE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
